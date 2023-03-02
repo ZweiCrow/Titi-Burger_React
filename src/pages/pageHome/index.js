@@ -37,14 +37,14 @@ const Home = () => {
                 <h2>Nos Burgers</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sint, minima corrupti molestias labore repudiandae eum itaque necessitatibus ea. Laboriosam tempore explicabo tenetur illo inventore laborum, ad non odit saepe.</p>
             </div>
-            <ul class="Carousel">
+            {/* <ul className="Carousel">
                 <li><img src="./images/Darko.png" alt=""/></li>
                 <li><img src="./images/Original.png" alt=""/></li>
                 <li><img src="./images/Tropica.png" alt=""/></li>
                 <li><img src="./images/Darko.png" alt=""/></li>
                 <li><img src="./images/Original.png" alt=""/></li>
                 <li><img src="./images/Tropica.png" alt=""/></li>
-            </ul>
+            </ul> */}
         </section>
         <section id="Actus">
             <div><h2>Actus</h2></div>
@@ -67,14 +67,14 @@ const Home = () => {
             </ul>
         </section>
         <section id="Newsletter">
-            <h2 style="display: none;">Newsletter</h2>
+            <h2 style={{display: "none"}}>Newsletter</h2>
             <div>
                 <p>Des offres et des actus <br/> Chaques semaines sur Titi Burger</p>
             </div>
             <div id="newsForm">
                 <p>Inscription à la Newsletter</p>
                 <form>
-                    <label for="email"> c'est par ici &#10233;</label>
+                    <label htmlFor="email"> c'est par ici &#10233;</label>
                     <input type="email" name="email" id="email"/>
                 </form>
             </div>
