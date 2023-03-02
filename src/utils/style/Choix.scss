@@ -1,0 +1,51 @@
+
+@import "reset.scss";
+@import "variables.scss";
+@import "HeaderC.scss";
+@import "Arianne.scss";
+@import "Footer.scss";
+
+body  {background: url(../../../public/public/images/header.png) no-repeat;background-size: 150% 100%;}
+
+#menu {width: 75%;height: fit-content;padding-bottom: 50px;margin: 50px auto;background: $blancT;border-radius: 15px;@include centerBlocH;justify-content: flex-start;
+        #up {@include centerBloc;height: 200px;width: 90%;
+              h1  {width: 50%;font-size: 50px;font-weight: bold;color: $violet;}
+              div {width: 50%;height: 100%;background: url(../../../public/images/Icons/progressBar.svg)no-repeat;background-size: 80%;background-position: center;@include centerBloc;justify-content: space-around;
+                    div {width: 100px;height: 100px;border-radius: 15px;background: $noir;@include mask;
+                          img {width: 100%;height: 100%;transition: .5s;
+                                &:hover {filter: brightness(1.5);}
+                              }
+                        }
+                  }
+            }
+        #down {height: fit-content;width: 90%;
+                form  {width: 100%;height: fit-content;
+                        ul  {width: 100%;height: fit-content;
+                              li  {height: 150px;width: 85%;background: $mauve;margin: 25px auto;box-shadow: inset 0 4px 4px rgba(0, 0, 0, .25);border-radius: 10px;@include centerBloc;transition: .5s;
+                                    &:has(> input:checked)  {background: $fushia;box-shadow: 0 0 4px $rose;
+                                                              h3  {color: $neon;filter: drop-shadow(0 0 4px $rose);}
+                                                              p   {color: $blanc;}
+                                                            }
+                                    &:hover {background: $neon;box-shadow: 0 0 4px $rose;}
+                                    input {height: 90%;width: 5%;background: $noir;display: none;}
+                                    label {height: 90%;width: 95%;@include centerBloc;
+                                            .image  {height: 100%;width: 20%;background: url(../../../public/images/Icons/burgerBack.svg)no-repeat;background-size: 100% 98%;background-position: center;
+                                                      img {height: 70%;width: 70%;}
+                                                    }
+                                            .desc   {height: 100%;width: 60%;flex-direction: column;align-items: flex-start;
+                                                      h3,p  {margin: 0 10px;}
+                                                      h3    {font-weight: bold;}
+                                                      p     {font-size: 18px;margin-top: 10px;}
+                                                    }
+                                            .prix   {height: 100%;width: 20%;}
+                                          }
+                                  }
+                            }
+                        div   {width: 100%;height: 10%;@include centerBloc;
+                                button  {width: fit-content;@include bouton;}
+                                a       {@include cta;padding: 10px 50px;border-radius: 10px;}
+                              }
+                      }
+              }
+      }
+
