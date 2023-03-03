@@ -27,8 +27,8 @@ const Footer = () => {
                 <Link to="/">FAQ</Link>
             </li>
             <li id="socials">
-                <Link to="/"><img src="./images/Icons/Instagram.svg" alt=""/></Link>
-                <Link to="/"><img src="./images/Icons/Facebook.svg" alt=""/></Link>
+                <Link to="/"><img src="./image/Icons/Instagram.svg" alt=""/></Link>
+                <Link to="/"><img src="./image/Icons/Facebook.svg" alt=""/></Link>
             </li>
         </ul>
     </footer>
