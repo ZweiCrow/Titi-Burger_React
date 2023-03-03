@@ -1,13 +1,10 @@
 
 @import "reset.scss";
 @import "variables.scss";
-@import "HeaderC.scss";
 @import "Arianne.scss";
-@import "Footer.scss";
 
-body  {background: url(../../../public/public/images/header.png) no-repeat;background-size: 150% 100%;}
-
-#menu {width: 75%;height: fit-content;padding-bottom: 50px;margin: 50px auto;background: $blancT;border-radius: 15px;@include centerBlocH;justify-content: flex-start;
+.choix{background: url(../../../public/images/header.png) no-repeat;background-size: 150% 100%; padding-bottom: 50px;
+#menu {width: 75%;height: fit-content;padding-bottom: 50px;margin: 50px auto 0;background: $blancT;border-radius: 15px;@include centerBlocH;justify-content: flex-start;
         #up {@include centerBloc;height: 200px;width: 90%;
               h1  {width: 50%;font-size: 50px;font-weight: bold;color: $violet;}
               div {width: 50%;height: 100%;background: url(../../../public/images/Icons/progressBar.svg)no-repeat;background-size: 80%;background-position: center;@include centerBloc;justify-content: space-around;
@@ -49,3 +46,4 @@ body  {background: url(../../../public/public/images/header.png) no-repeat;backg
               }
       }
 
+}

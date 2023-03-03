@@ -1,24 +1,25 @@
 import React from 'react';
-import "../utils/style/header.css"
+import { Link } from 'react-router-dom';
+import "../utils/style/Header.scss"
 
 const Header = () => {
   return (
     <header>
         <div id="frontHeader">
-            <div id="logo"><a href="index.html"><img src="./images/Icons/Logo.svg" alt=""/></a></div>
+            <div id="logo"><Link to="/"><img src="./images/Icons/Logo.svg" alt=""/></Link></div>
             <div id="Navbar">
                 <div id="menuBurger"><img src="./images/Icons/menuBurger.svg" alt=""/></div>
                 <div>
-                    <a href="click-collect.html">Click & Collect</a>
-                    <a href="#">Livraison</a>
+                    <Link to="/click-collect">Click & Collect</Link>
+                    <Link to="#">Livraison</Link>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#Burgers">La Carte</a></li>
-                        <li><a href="#Story">Titi Story</a></li>
-                        <li><a href="#Resto">Le Resto</a></li>
-                        <li><a href="#Actus">Actus</a></li>
-                        <li><a href="">Réserver</a></li>
+                        <li><Link to="#Burgers">La Carte</Link></li>
+                        <li><Link to="#Story">Titi Story</Link></li>
+                        <li><Link to="#Resto">Le Resto</Link></li>
+                        <li><Link to="#Actus">Actus</Link></li>
+                        <li><Link to="">Réserver</Link></li>
                     </ul>
                 </nav>
             </div>

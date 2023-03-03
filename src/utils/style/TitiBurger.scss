@@ -1,14 +1,13 @@
 @import "reset.scss";
 @import "variables.scss";
-@import "Header.scss";
-@import "Footer.scss";
 
 h2          {font-size: 40px;color: $bleu;font-weight: bold;}
 h3          {font-size: 30px;color: $rose;}
 p           {font-size: 25px;color: $noir;}
 html,body   {overflow-x: hidden;}
 
-main  {@include centerBloc;flex-direction: column;
+.home {
+main  {@include centerBloc;flex-direction: column; margin-top: 400px;
         #menuMobile {display: none;}
         #Presentation {width: 90%;height: 500px;margin: 25px 0;@include centerBloc;
                         #Resto  {width: 40%;height: 100%;
@@ -46,6 +45,7 @@ main  {@include centerBloc;flex-direction: column;
                                     }
                       }
       }
+}
 
       .slick-prev:before  {color: $violet;}
       .slick-next:before  {color: $violet;}

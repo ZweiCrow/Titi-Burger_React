@@ -1,12 +1,11 @@
 @import "reset.scss";
 @import "variables.scss";
-@import "HeaderC.scss";
 @import "Arianne.scss";
-@import "Footer.scss";
 
-body  {background: url(../../../public/images/header.png) no-repeat;background-size: 150% 100%;}
 
-#menu {width: 95%;height: 900px;margin: 50px auto;background: url(../../../public/images/Icons/C&CBack.svg)no-repeat;background-size: 100% 100%;@include centerBlocH;
+.CC{background: url(../../../public/images/header.png) no-repeat;background-size: 150% 100%;
+main  { margin: 0; display: block;}
+#menu {width: 95%;height: 1000px;margin: 50px auto 0;background: url(../../../public/images/Icons/C&CBack.svg)no-repeat;background-size: 100% 100%;@include centerBlocH;
         h1  {font-size: 50px;font-weight: bold;color: $violet;}
         p   {font-size: 25px;color: $noir;width: 80%;margin: 70px 0;text-align: center;}
         a   {font-size: 25px;@include cta;}
@@ -20,3 +19,4 @@ body  {background: url(../../../public/images/header.png) no-repeat;background-s
               }
         }
       }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
-import "../utils/style/footer.css"
+import { Link } from 'react-router-dom';
+import "../utils/style/Footer.scss"
 
 const Footer = () => {
   return (
@@ -7,15 +8,15 @@ const Footer = () => {
         <ul>
             <li>
                 <p>Mentions Légales</p>
-                <a href="index.html">CGU</a>
-                <a href="index.html">CGV</a>
+                <Link to="/">CGU</Link>
+                <Link to="/">CGV</Link>
             </li>
             <li>
                 <p>Plan du site</p>
-                <a href="index.html">La Carte</a>
-                <a href="index.html">Titi Story</a>
-                <a href="index.html">Le Resto</a>
-                <a href="index.html">Actus</a>
+                <Link to="/">La Carte</Link>
+                <Link to="/">Titi Story</Link>
+                <Link to="/">Le Resto</Link>
+                <Link to="/">Actus</Link>
             </li>
             <li id="map">
                 <p>Où nous touver ?</p>
@@ -23,11 +24,11 @@ const Footer = () => {
             </li>
             <li>
                 <p>Contacts</p>
-                <a href="index.html">FAQ</a>
+                <Link to="/">FAQ</Link>
             </li>
             <li id="socials">
-                <a href="index.html"><img src="./images/Icons/Instagram.svg" alt=""/></a>
-                <a href="index.html"><img src="./images/Icons/Facebook.svg" alt=""/></a>
+                <Link to="/"><img src="./images/Icons/Instagram.svg" alt=""/></Link>
+                <Link to="/"><img src="./images/Icons/Facebook.svg" alt=""/></Link>
             </li>
         </ul>
     </footer>

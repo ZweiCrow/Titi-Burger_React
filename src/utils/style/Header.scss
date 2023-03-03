@@ -4,7 +4,7 @@
 header  {height: 500px;
           #frontHeader  {height: 150px;width: 100%;position: absolute;z-index: 5;@include centerBloc;background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);;
                           #logo {height: 100%;width: 20%;@include centerBloc;
-                                  img {width: 90%;height: 90%;
+                                  img {width: 90%;height: 90%; transition: .5s;
                                         &:hover {filter: drop-shadow(0 0 4px $blanc);}
                                       }
                                 }
