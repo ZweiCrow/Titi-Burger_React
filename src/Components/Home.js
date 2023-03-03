@@ -8,7 +8,7 @@ const Home = () => {
     <main>
         <div id="menuMobile">
             <div>
-                <Link to="click-collect.html">Click & Collect</Link>
+                <Link to="/click-collect">Click & Collect</Link>
                 <Link to="">Livraison</Link>
             </div>
             <nav>
