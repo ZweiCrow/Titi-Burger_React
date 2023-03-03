@@ -1,0 +1,165 @@
+@import "reset.scss";
+@import "variables.scss";
+
+h2          {font-size: 40px;color: $bleu;font-weight: bold;}
+h3          {font-size: 30px;color: $rose;}
+p           {font-size: 25px;color: $noir;}
+html,body   {overflow-x: hidden;}
+
+.home {
+main  {@include centerBloc;flex-direction: column; margin-top: 400px;
+        #menuMobile {display: none;}
+        #Presentation {width: 90%;height: 500px;margin: 25px 0;@include centerBloc;
+                        #Resto  {width: 40%;height: 100%;
+                                  h2  {margin: 20px 0;}
+                                }
+                        #Story  {width: 60%;height: 100%;
+                                  h2  {margin: 20px 0;}
+                                  h3  {margin-bottom: 25px;}
+                                  p   {margin-bottom: 30px;}
+                                  a   {@include lien;color: $marron;font-size: 25px;}
+                                }
+                      }
+        #Burgers  {width: 90%;height: 400px;margin: 10px 0;@include centerBloc;justify-content: space-between;
+                    #NosBurger  {width: 35%;height: 100%;@include centerBlocH;align-items: flex-start;}
+                    .Carousel   {width: 60%;height: 70%;}
+                  }
+        #Actus  {width: 90%;height: 600px;margin: 40px 0 10px;@include centerBlocH;
+                  div {height: 10%; @include centerBloc;}
+                  ul  {width: 100%;height: 90%;@include centerBloc;justify-content: space-around;
+                        li  {width: 30%;height: 100%;@include centerBlocH;
+                              img {width: 90%;border-radius: 15px;margin: 10px 0;}
+                              a   {@include cta;font-size: 20px;}
+                            }
+                      }
+                }
+
+        #Newsletter   {width: 90%;height: 200px;background: $mauve;border-radius: 15px;margin: 15px 0 50px;@include centerBloc;
+                        div   {height: 100%;width: 40%;@include centerBlocH;margin-left: 20px;}
+                        #newsForm   {height: 100%;width: 40%;@include centerBlocH;
+                                      p     {margin-top: 20px;}
+                                      form  {height: 90%;width: 100%;@include centerBloc;
+                                              label {font-size: 25px;color: $noir;margin-right: 10px;}
+                                              input {width: 40%;height: 30px;border-radius: 15px;border: none;text-indent: 15px;color: $violet;font-weight: bold;font-size: 20px;}
+                                            }
+                                    }
+                      }
+      }
+}
+
+      .slick-prev:before  {color: $violet;}
+      .slick-next:before  {color: $violet;}
+      .slick-slide img    {border-radius: 15px;width: 100%;}
+
+@media screen and (max-width: 800px) {
+  main  {@include centerBloc;flex-direction: column;
+    #menuMobile {display: block;width: 70%;height: 1045px;background: $noir;position: absolute;top: 0;right: -550px;z-index: 100;transition: 1s;border-radius: 0 0 0 100px;opacity: 0;visibility: hidden;
+                  div {@include centerBlocH;margin: 50px;
+                        a {margin: 25px 30px;font-size: 45px;@include cta;}
+                      }
+                  nav {@include centerBlocH;
+                        ul  {@include centerBlocH;
+                              li  {margin: 20px 30px;@include liens;
+                                    a {font-size: 35px;@include liens;}
+                                  }
+                            }
+                      }
+                }
+    #Presentation {width: 90%;height: 1000px;margin: -40px 0;@include centerBloc;flex-wrap: wrap;
+                    #Resto  {width: 90%;height: 30%;
+                              h2  {margin: 20px 0;}
+                              img {margin-left: 15%;}
+                            }
+                    #Story  {width: 90%;height: 40%;
+                              h2  {margin: 20px 0;}
+                              h3  {margin-bottom: 25px;}
+                              p   {margin-bottom: 30px;}
+                              a   {@include lien;color: $marron;font-size: 25px;}
+                            }
+                  }
+    #Burgers  {width: 90%;height: 500px;margin: 10px 0;@include centerBloc;flex-wrap: wrap;
+                #NosBurger  {width: 90%;height: 60%;@include centerBlocH;align-items: flex-start;
+                              h2  {margin-bottom: 20px;}
+                            }
+                .Carousel   {width: 69%;height: 30%;
+                              li {margin: 0 5px;}
+                            }
+              }
+    #Actus  {width: 90%;height: 400px;margin: 40px 0 10px;@include centerBlocH;
+              div {height: 10%; @include centerBloc;}
+              ul  {width: 100%;height: 90%;@include centerBloc;justify-content: space-around;
+                    li  {width: 30%;height: 100%;@include centerBlocH;
+                          img {width: 90%;border-radius: 15px;margin: 10px 0;}
+                          a   {@include cta;font-size: 20px;}
+                        }
+                  }
+            }
+
+    #Newsletter   {width: 90%;height: 200px;background: $mauve;border-radius: 15px;margin: 15px 0 50px;@include centerBloc;justify-content: space-around;
+                    div   {height: 100%;width: 40%;@include centerBlocH;}
+                    #newsForm   {height: 100%;width: 55%;@include centerBlocH;
+                                  p     {margin-top: 20px;text-align: center;}
+                                  form  {height: 90%;width: 100%;@include centerBloc;
+                                          label {font-size: 25px;color: $noir;margin-right: 10px;}
+                                          input {width: 30%;height: 30px;border-radius: 15px;border: none;text-indent: 15px;color: $violet;font-weight: bold;font-size: 20px;}
+                                        }
+                                }
+                  }
+  }
+}
+@media screen and (max-width: 400px) {
+  main  {@include centerBloc;flex-direction: column;
+    #menuMobile {display: block;width: 80%;height: 845px;background: $noir;position: absolute;top: 0;right: -550px;visibility: visible;z-index: 100;transition: 1s;border-radius: 0 0 0 100px;
+                  div {@include centerBlocH;margin: 50px;
+                        a {margin: 25px 30px;font-size: 30px;@include cta;}
+                      }
+                  nav {@include centerBlocH;
+                        ul  {@include centerBlocH;
+                              li  {margin: 20px 30px;@include liens;
+                                    a {font-size: 25px;@include liens;}
+                                  }
+                            }
+                      }
+                }
+    #Presentation {width: 90%;height: 1000px;margin: -40px 0;@include centerBloc;flex-wrap: wrap;
+                    #Resto  {width: 80%;height: 30%;@include centerBlocH;margin: 40px 0;
+                              img {width: 100%;margin: auto;}
+                            }
+                    #Story  {width: 90%;height: 60%;@include centerBlocH;margin-top: 30px;
+                              h2  {text-align: center;}
+                              h3  {margin-bottom: 25px;}
+                              p   {margin-bottom: 30px;}
+                              a   {@include lien;color: $marron;font-size: 25px;}
+                            }
+                  }
+    #Burgers  {width: 90%;height: 500px;margin: 180px 0 0;@include centerBloc;flex-wrap: wrap;
+                #NosBurger  {width: 90%;height: 40%;@include centerBlocH;align-items: flex-start;
+                              h2  {margin-bottom: 20px;}
+                            }
+                .Carousel   {width: 69%;height: 7%;
+                              li {margin: 0 5px;}
+                            }
+              }
+    #Actus  {width: 90%;height: 400px;margin: 40px 0 10px;@include centerBlocH;
+              div {height: 10%; @include centerBloc;}
+              ul  {width: 100%;height: 90%;@include centerBloc;justify-content: space-around;
+                    li  {width: 30%;height: 100%;@include centerBlocH;
+                          h3  {font-size: 18px;}
+                          img {width: 90%;border-radius: 15px;margin: 10px 0;}
+                          a   {@include cta;font-size: 11px;}
+                        }
+                  }
+            }
+
+    #Newsletter   {width: 90%;height: 150px;background: $mauve;border-radius: 15px;margin: 15px 0 50px;@include centerBloc;justify-content: space-around;
+                    div   {height: 100%;width: 40%;@include centerBlocH;display: none;}
+                    #newsForm   {height: 100%;width: 100%;@include centerBlocH;
+                                  p     {margin-top: 20px;text-align: center;}
+                                  form  {height: 90%;width: 100%;@include centerBloc;
+                                          label {font-size: 25px;color: $noir;margin-right: 10px;}
+                                          input {width: 30%;height: 30px;border-radius: 15px;border: none;text-indent: 15px;color: $violet;font-weight: bold;font-size: 20px;}
+                                        }
+                                }
+                  }
+  }
+}

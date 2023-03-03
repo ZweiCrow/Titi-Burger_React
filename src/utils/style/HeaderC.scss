@@ -1,0 +1,21 @@
+@import "reset.scss";
+@import "variables.scss";
+
+header  {height: 150px;
+          #frontHeader  {height: 150px;width: 100%;position: absolute;z-index: 5;@include centerBloc;background: rgba(0,0,0,.5);
+                          #logo {height: 100%;width: 20%;@include centerBloc;
+                                  img {width: 90%;height: 90%; transition: .5s;
+                                        &:hover {filter: drop-shadow(0 0 4px $blanc);}
+                                      }
+                                }
+                          #Navbar {height: 100%;width: 80%;display: flex;flex-direction: column;@include centerBloc;
+                                    nav {height: 50%;width: 100%;@include centerBloc;justify-content: flex-end;
+                                          ul  {@include centerBloc;
+                                                li  {margin: 0 30px;
+                                                      a {font-size: 25px;@include liens;}
+                                                    }
+                                              }
+                                        }
+                                  }
+                        }
+        }
