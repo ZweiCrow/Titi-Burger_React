@@ -6,6 +6,7 @@ import PageBurgers from './pages/pageBurgers';
 import PageBoissons from './pages/pageBoissons';
 import PageAccomp from './pages/pageAccomp';
 import PageDesserts from './pages/pageDesserts';
+import PageRecap from './pages/pageRecap';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/nos-boissons' element={<PageBoissons/>}/>
         <Route path='/nos-accompagnements' element={<PageAccomp/>}/>
         <Route path='/nos-desserts' element={<PageDesserts/>}/>
+        <Route path='/recapitulatif' element={<PageRecap/>}/>
       </Route>
     </Routes>
     </>

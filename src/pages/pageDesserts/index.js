@@ -9,7 +9,7 @@ const PageDesserts = () => {
       <HeaderC/>
       <main>
       <div id="Arianne">
-        <p><Link to="/">Accueil</Link> &#x3e;<Link to="/click-collect">Click & Collect</Link>&#x3e;<Link to="/nos-burgers">Choix des Burgers</Link>&#x3e;<Link to="/nos-boissons">Choix des Boissons</Link>&#x3e;<Link to="/nos-accompagnements">Choix des Accompagnements</Link>&#x3e;Choix des Desserts </p>
+        <p><Link to="/">Accueil</Link> &#x3e; <Link to="/click-collect">Click & Collect</Link> &#x3e; <Link to="/nos-burgers">Choix des Burgers</Link> &#x3e; <Link to="/nos-boissons">Choix des Boissons</Link> &#x3e; <Link to="/nos-accompagnements">Choix des Accompagnements</Link> &#x3e; Choix des Desserts </p>
       </div>
 
       <div id="menu">
@@ -39,7 +39,7 @@ const PageDesserts = () => {
                         </label>
                     </li>
                 </ul>
-                <div><Link to="recap.html">Suivant</Link></div>
+                <div><Link to="/recapitulatif">Suivant</Link></div>
                 
             </form>
         </div>
