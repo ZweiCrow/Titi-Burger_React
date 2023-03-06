@@ -26,10 +26,13 @@ const PageBurgers = () => {
 
   userCoice();
 
+  
+
   function userCoice() {
     select = document.querySelectorAll("input[type=radio]");
     for (const el of select) {
       el.addEventListener("input", (e) => {
+        console.log(e);
         sessionStorage.setItem("choix1", `${e.target.value}`);
       });
     }
@@ -61,17 +64,17 @@ const PageBurgers = () => {
             <form action="">
               <ul id="api">
                 {burger.map((item)=>{
-                  return (<li>
-                            <input value={item.image} type="radio" name="choix" id={item._id}/>
-                            <label for={item._id}>
-                                <div class="image">
+                  return (<li key={item._id}>
+                            <input value={item._id} type="radio" name="choix" id={item._id}/>
+                            <label htmlFor={item._id}>
+                                <div className="image">
                                     <img src={item.image} alt=""/>
                                 </div>
-                                <div class="desc">
+                                <div className="desc">
                                     <h3>{item.name}</h3>
                                     <p>{item.description}</p>
                                 </div>
-                                <div class="prix"><p>{item.price.$numberDecimal} €</p></div>
+                                <div className="prix"><p>{item.price.$numberDecimal} €</p></div>
                             </label>
                           </li>)
                     })

@@ -22,7 +22,9 @@ main  {@include centerBloc;flex-direction: column; margin-top: 400px;
                       }
         #Burgers  {width: 90%;height: 400px;margin: 10px 0;@include centerBloc;justify-content: space-between;
                     #NosBurger  {width: 35%;height: 100%;@include centerBlocH;align-items: flex-start;}
-                    .Carousel   {width: 60%;height: 70%;}
+                    .Carousel   {width: 60%;height: 70%;
+                                  .slick-slide { width: 10% !important; margin: 0 13px;}
+                                }
                   }
         #Actus  {width: 90%;height: 600px;margin: 40px 0 10px;@include centerBlocH;
                   div {height: 10%; @include centerBloc;}

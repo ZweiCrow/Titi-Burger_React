@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "../utils/style/TitiBurger.scss"
+import Carousel from './Carousel';
 
 const Home = () => {
       
@@ -40,14 +41,9 @@ const Home = () => {
                 <h2>Nos Burgers</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sint, minima corrupti molestias labore repudiandae eum itaque necessitatibus ea. Laboriosam tempore explicabo tenetur illo inventore laborum, ad non odit saepe.</p>
             </div>
-            {/* <ul className="Carousel">
-                <li><img src="./image/Darko.png" alt=""/></li>
-                <li><img src="./image/Original.png" alt=""/></li>
-                <li><img src="./image/Tropica.png" alt=""/></li>
-                <li><img src="./image/Darko.png" alt=""/></li>
-                <li><img src="./image/Original.png" alt=""/></li>
-                <li><img src="./image/Tropica.png" alt=""/></li>
-            </ul> */}
+            <div className='Carousel'>
+            <Carousel/>
+            </div>
         </section>
         <section id="Actus">
             <div><h2>Actus</h2></div>
