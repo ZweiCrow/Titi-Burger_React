@@ -5,9 +5,11 @@ import HeaderC from '../../Components/HeaderC';
 
 const PageRecap = () => {
   let choix1 = sessionStorage.getItem("choix1")
-let choix2 = sessionStorage.getItem("choix2")
-let choix3 = sessionStorage.getItem("choix3")
-let choix4 = sessionStorage.getItem("choix4")
+  let choix2 = sessionStorage.getItem("choix2")
+  let choix3 = sessionStorage.getItem("choix3")
+  let choix4 = sessionStorage.getItem("choix4")
+
+  const reset = () => {sessionStorage.clear()}
 
   return (
     <div className='CC'>
@@ -25,7 +27,7 @@ let choix4 = sessionStorage.getItem("choix4")
           <div><Link to="/nos-accompagnements"><img id="Choix3" src={choix3} alt=""/></Link></div>
           <div><Link to="/nos-desserts"><img id="Choix4" src={choix4} alt=""/></Link></div>
         </div>
-        <Link to="/">Valider</Link>
+        <Link to="/" onClick={reset}>Valider</Link>
       </div>
     </main>
     </div>
