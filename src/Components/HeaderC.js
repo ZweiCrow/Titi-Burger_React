@@ -6,7 +6,7 @@ const HeaderC = () => {
   return (
     <header>
         <div id="frontHeader">
-            <div id="logo"><Link to="/"><img src="./images/Icons/Logo.svg" alt=""/></Link></div>
+            <div id="logo"><Link to="/"><img src="./image/Icons/Logo.svg" alt=""/></Link></div>
             <div id="Navbar">
                 <nav>
                     <ul>

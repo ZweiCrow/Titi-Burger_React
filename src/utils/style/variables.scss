@@ -32,7 +32,7 @@ a                   {font-size: 25px;color: $blanc;}
 @mixin lien         {transition: .5s;
                       &:hover {color: $neon;filter: drop-shadow(0 0 4px $rose);}  
                     }
-@mixin mask         {mask-image: url(../../../public/images/Icons/mask.svg);mask-size: 100% 100%;mask-repeat: no-repeat;-webkit-mask-image: url(../../../public/images/Icons/mask.svg);-webkit-mask-size: 100% 100%;-webkit-mask-repeat: no-repeat;}
+@mixin mask         {mask-image: url(../../../public/image/Icons/mask.svg);mask-size: 100% 100%;mask-repeat: no-repeat;-webkit-mask-image: url(../../../public/image/Icons/mask.svg);-webkit-mask-size: 100% 100%;-webkit-mask-repeat: no-repeat;}
 
 @mixin bouton       {background: $rose;border: none;font-size: 25px;color: $blanc;padding: 10px 50px;border-radius: 10px;border: 2px solid $rose;transition: .5s;cursor: pointer;
                       &:hover {background: $blanc;border: 2px solid $blanc;color: $rose;box-shadow: 0 0 4px $rose;}

@@ -22,7 +22,9 @@ main  {@include centerBloc;flex-direction: column; margin-top: 400px;
                       }
         #Burgers  {width: 90%;height: 400px;margin: 10px 0;@include centerBloc;justify-content: space-between;
                     #NosBurger  {width: 35%;height: 100%;@include centerBlocH;align-items: flex-start;}
-                    .Carousel   {width: 60%;height: 70%;}
+                    .Carousel   {width: 60%;height: 70%;
+                                  .slick-slide { width: 10% !important; margin: 0 13px;}
+                                }
                   }
         #Actus  {width: 90%;height: 600px;margin: 40px 0 10px;@include centerBlocH;
                   div {height: 10%; @include centerBloc;}
@@ -45,14 +47,14 @@ main  {@include centerBloc;flex-direction: column; margin-top: 400px;
                                     }
                       }
       }
-}
+
 
       .slick-prev:before  {color: $violet;}
       .slick-next:before  {color: $violet;}
       .slick-slide img    {border-radius: 15px;width: 100%;}
 
 @media screen and (max-width: 800px) {
-  main  {@include centerBloc;flex-direction: column;
+  main  {@include centerBloc;flex-direction: column; margin-top: 0;
     #menuMobile {display: block;width: 70%;height: 1045px;background: $noir;position: absolute;top: 0;right: -550px;z-index: 100;transition: 1s;border-radius: 0 0 0 100px;opacity: 0;visibility: hidden;
                   div {@include centerBlocH;margin: 50px;
                         a {margin: 25px 30px;font-size: 45px;@include cta;}
@@ -162,4 +164,5 @@ main  {@include centerBloc;flex-direction: column; margin-top: 400px;
                                 }
                   }
   }
+}
 }

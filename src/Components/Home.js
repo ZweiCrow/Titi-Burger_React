@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "../utils/style/TitiBurger.scss"
+import Carousel from './Carousel';
 
 const Home = () => {
+      
   return (
     <div className='home'>
     <main>
         <div id="menuMobile">
             <div>
-                <Link to="click-collect.html">Click & Collect</Link>
+                <Link to="/click-collect">Click & Collect</Link>
                 <Link to="">Livraison</Link>
             </div>
             <nav>
@@ -18,14 +20,14 @@ const Home = () => {
                     <li><Link to="">Le Resto</Link></li>
                     <li><Link to="">Actus</Link></li>
                     <li><Link to="">Réserver</Link></li>
-                    <li id="closeMenu"><img src="./images/Icons/closeMenu.svg" alt=""/></li>
+                    <li id="closeMenu"><img src="./image/Icons/closeMenu.svg" alt=""/></li>
                 </ul>
             </nav>
         </div>
         <section id="Presentation">
             <div id="Resto">
                 <h2>Le Resto</h2>
-                <img src="./images/open.png" alt=""/>
+                <img src="./image/open.png" alt=""/>
             </div>
             <div id="Story">
                 <h2>Titi Story</h2>
@@ -39,31 +41,26 @@ const Home = () => {
                 <h2>Nos Burgers</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sint, minima corrupti molestias labore repudiandae eum itaque necessitatibus ea. Laboriosam tempore explicabo tenetur illo inventore laborum, ad non odit saepe.</p>
             </div>
-            {/* <ul className="Carousel">
-                <li><img src="./images/Darko.png" alt=""/></li>
-                <li><img src="./images/Original.png" alt=""/></li>
-                <li><img src="./images/Tropica.png" alt=""/></li>
-                <li><img src="./images/Darko.png" alt=""/></li>
-                <li><img src="./images/Original.png" alt=""/></li>
-                <li><img src="./images/Tropica.png" alt=""/></li>
-            </ul> */}
+            <div className='Carousel'>
+            <Carousel/>
+            </div>
         </section>
         <section id="Actus">
             <div><h2>Actus</h2></div>
             <ul>
                 <li>
                     <h3>Article 1</h3>
-                    <img src="./images/Affiche1.png" alt=""/>
+                    <img src="./image/Affiche1.png" alt=""/>
                     <Link to="">En Savoir +</Link>
                 </li>
                 <li>
                     <h3>Article 1</h3>
-                    <img src="./images/Limonade.png" alt=""/>
+                    <img src="./image/Limonade.png" alt=""/>
                     <Link to="">En Savoir +</Link>
                 </li>
                 <li>
                     <h3>Article 1</h3>
-                    <img src="./images/Tiramisu.png" alt=""/>
+                    <img src="./image/Tiramisu.png" alt=""/>
                     <Link to="">En Savoir +</Link>
                 </li>
             </ul>

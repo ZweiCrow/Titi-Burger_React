@@ -6,9 +6,9 @@ const Header = () => {
   return (
     <header>
         <div id="frontHeader">
-            <div id="logo"><Link to="/"><img src="./images/Icons/Logo.svg" alt=""/></Link></div>
+            <div id="logo"><Link to="/"><img src="./image/Icons/Logo.svg" alt=""/></Link></div>
             <div id="Navbar">
-                <div id="menuBurger"><img src="./images/Icons/menuBurger.svg" alt=""/></div>
+                <div id="menuBurger"><img src="./image/Icons/menuBurger.svg" alt=""/></div>
                 <div>
                     <Link to="/click-collect">Click & Collect</Link>
                     <Link to="#">Livraison</Link>
@@ -24,7 +24,7 @@ const Header = () => {
                 </nav>
             </div>
         </div>
-        <div id="bottomHeader"><img src="./images/header.png" alt=""/></div>
+        <div id="bottomHeader"><img src="./image/header.png" alt=""/></div>
     </header>
   );
 };
