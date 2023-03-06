@@ -1,54 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import HeaderC from "../../Components/HeaderC";
 import "../../utils/style/Choix.scss";
 
-const PageDesserts = () => {
-  let html = "";
-  let select = "";
+// Url api
+import { URL } from "../../utils/constantes/urls";
 
+const PageDesserts = () => {
   let choix1 = sessionStorage.getItem("choix1");
   let choix2 = sessionStorage.getItem("choix2");
   let choix3 = sessionStorage.getItem("choix3");
+  let select = ""
+  const [dessert, setDessert] = useState([])
 
-  fetch("https://titi.startwin.fr/products/type/dessert")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      for (let index = 0; index < data.length; index++) {
-        jsonToHtml(data, index);
+  useEffect(()=>{
+    const fetchDessert = async () => {
+      try{
+        const {data} = await axios.get(URL.fetchDessert)
+        setDessert(data);
+      }catch(error){
+        console.log(error.message());
       }
-      document.querySelector("#api").innerHTML = html;
-      userCoice();
-    });
+    }
+    fetchDessert()
+  },[])
+
+  userCoice();
+
   function userCoice() {
     select = document.querySelectorAll("input[type=radio]");
-    console.log(select);
     for (const el of select) {
       el.addEventListener("input", (e) => {
-        // console.log(e.target.value);
         sessionStorage.setItem("choix4", `${e.target.value}`);
       });
     }
-  }
-
-  function jsonToHtml(arr, index) {
-    const el = arr[index];
-    console.log(el);
-    html += `<li>
-          <input value="${el.image}" type="radio" name="choix" id="${el._id}"/>
-          <label for="${el._id}">
-              <div class="image">
-                  <img src="${el.image}" alt=""/>
-              </div>
-              <div class="desc">
-                  <h3>${el.name}</h3>
-                  <p>${el.description}</p>
-              </div>
-              <div class="prix"><p>${el.price.$numberDecimal} $</p></div>
-          </label>
-      </li>`;
   }
 
   return (
@@ -90,7 +77,24 @@ const PageDesserts = () => {
           </div>
           <div id="down">
             <form>
-              <ul id="api">{html}</ul>
+            <ul id="api">
+                {dessert.map((item)=>{
+                  return (<li>
+                            <input value={item.image} type="radio" name="choix" id={item._id}/>
+                            <label for={item._id}>
+                                <div class="image">
+                                    <img src={item.image} alt=""/>
+                                </div>
+                                <div class="desc">
+                                    <h3>{item.name}</h3>
+                                    <p>{item.description}</p>
+                                </div>
+                                <div class="prix"><p>{item.price.$numberDecimal} €</p></div>
+                            </label>
+                          </li>)
+                    })
+                  }
+              </ul>
               <div>
                 <Link to="/recapitulatif">Suivant</Link>
               </div>
