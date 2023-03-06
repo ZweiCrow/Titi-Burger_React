@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import "../utils/style/TitiBurger.scss"
 
 const Home = () => {
+      
   return (
     <div className='home'>
     <main>
