@@ -8,6 +8,7 @@ main  { margin: 0; display: block;}
 #menu {width: 95%;height: 1000px;margin: 50px auto 0;background: url(../../../public/image/Icons/C&CBack.svg)no-repeat;background-size: 100% 100%;@include centerBlocH;
         h1  {font-size: 50px;font-weight: bold;color: $violet;}
         p   {font-size: 25px;color: $noir;width: 80%;margin: 70px 0;text-align: center;}
+        #total  { margin: 20px 0;}
         a   {font-size: 25px;@include cta;}
         div {width: 80%;height: 40%;background: url(../../../public/image/Icons/progressBar.svg)no-repeat;background-size: 80%;background-position: center;@include centerBloc;justify-content: space-around;
           div {width: 200px;height: 200px;border-radius: 15px;background: $noir;@include mask;@include centerBloc;

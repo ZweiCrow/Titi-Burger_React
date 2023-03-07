@@ -13,9 +13,36 @@ const PageDesserts = () => {
   let choix2 = sessionStorage.getItem("choix2");
   let choix3 = sessionStorage.getItem("choix3");
   let select = ""
+  const [burger, setBurger] = useState([])
+  const [boisson, setBoisson] = useState([])
+  const [accompagnements, setAccompagnements] = useState([])
   const [dessert, setDessert] = useState([])
 
   useEffect(()=>{
+    const fetchBurgers = async () => {
+      try{
+        const {data} = await axios.get(URL.fetchBurger)
+        setBurger(data);
+      }catch(error){
+        console.log(error.message());
+      }
+    }
+    const fetchBoissons = async () => {
+      try{
+        const {data} = await axios.get(URL.fetchBoisson)
+        setBoisson(data);
+      }catch(error){
+        console.log(error.message());
+      }
+    }
+    const fetchAccompagnements = async () => {
+      try{
+        const {data} = await axios.get(URL.fetchAccompagnement)
+        setAccompagnements(data);
+      }catch(error){
+        console.log(error.message());
+      }
+    }
     const fetchDessert = async () => {
       try{
         const {data} = await axios.get(URL.fetchDessert)
@@ -24,6 +51,9 @@ const PageDesserts = () => {
         console.log(error.message());
       }
     }
+    fetchBurgers()
+    fetchBoissons()
+    fetchAccompagnements()
     fetchDessert()
   },[])
 
@@ -58,18 +88,33 @@ const PageDesserts = () => {
             <h1>Choix des Desserts</h1>
             <div id="userChoice">
               <div>
-                <Link to="/nos-burgers">
-                  <img id="Choix1" src={choix1} alt="" />
+              <Link to="/nos-burgers">
+                  {burger.map((item)=>{
+                      if(item._id === choix1){
+                        return(<img id="Choix1" key={item._id} src={item.image} alt="" />)
+                      }else{
+                        return(<img key={item._id} alt="" style={{display: "none"}}></img>)}
+                    })}
                 </Link>
               </div>
               <div>
-                <Link to="/nos-boissons">
-                  <img id="Choix2" src={choix2} alt="" />
+              <Link to="/nos-boissons">
+                  {boisson.map((item)=>{
+                      if(item._id === choix2){
+                        return(<img id="Choix2" key={item._id} src={item.image} alt="" />)
+                      }else{
+                        return(<img key={item._id} alt="" style={{display: "none"}}></img>)}
+                    })}
                 </Link>
               </div>
               <div>
-                <Link to="/nos-accompagnements">
-                  <img id="Choix3" src={choix3} alt="" />
+              <Link to="/nos-accompagnements">
+                  {accompagnements.map((item)=>{
+                      if(item._id === choix3){
+                        return(<img id="Choix3" key={item._id} src={item.image} alt="" />)
+                      }else{
+                        return(<img key={item._id} alt="" style={{display: "none"}}></img>)}
+                    })}
                 </Link>
               </div>
               <div></div>
@@ -80,7 +125,7 @@ const PageDesserts = () => {
             <ul id="api">
                 {dessert.map((item)=>{
                   return (<li key={item._id}>
-                            <input value={item.image} type="radio" name="choix" id={item._id}/>
+                            <input value={item._id} type="radio" name="choix" id={item._id}/>
                             <label htmlFor={item._id}>
                                 <div className="image">
                                     <img src={item.image} alt=""/>

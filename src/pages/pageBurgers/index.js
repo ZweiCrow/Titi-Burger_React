@@ -26,8 +26,6 @@ const PageBurgers = () => {
 
   userCoice();
 
-  
-
   function userCoice() {
     select = document.querySelectorAll("input[type=radio]");
     for (const el of select) {

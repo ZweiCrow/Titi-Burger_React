@@ -42,7 +42,9 @@ main  {@include centerBloc;flex-direction: column; margin-top: 400px;
                                       p     {margin-top: 20px;}
                                       form  {height: 90%;width: 100%;@include centerBloc;
                                               label {font-size: 25px;color: $noir;margin-right: 10px;}
-                                              input {width: 40%;height: 30px;border-radius: 15px;border: none;text-indent: 15px;color: $violet;font-weight: bold;font-size: 20px;}
+                                              input {width: 40%;height: 30px;border-radius: 15px;border: none;text-indent: 15px;color: $violet;font-weight: bold;font-size: 20px;
+                                                      &:focus { outline: none;}
+                                                    }
                                             }
                                     }
                       }

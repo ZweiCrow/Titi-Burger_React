@@ -11,9 +11,18 @@ import { URL } from "../../utils/constantes/urls";
 const PageBoissons = () => {
   let choix1 = sessionStorage.getItem("choix1");
   let select = ""
+  const [burger, setBurger] = useState([])
   const [boisson, setBoisson] = useState([])
 
   useEffect(()=>{
+    const fetchBurgers = async () => {
+      try{
+        const {data} = await axios.get(URL.fetchBurger)
+        setBurger(data);
+      }catch(error){
+        console.log(error.message());
+      }
+    }
     const fetchBoissons = async () => {
       try{
         const {data} = await axios.get(URL.fetchBoisson)
@@ -22,6 +31,7 @@ const PageBoissons = () => {
         console.log(error.message());
       }
     }
+    fetchBurgers()
     fetchBoissons()
   },[])
 
@@ -55,7 +65,12 @@ const PageBoissons = () => {
             <div id="userChoice">
               <div>
                 <Link to="/nos-burgers">
-                  <img id="Choix1" src={choix1} alt="" />
+                  {burger.map((item)=>{
+                      if(item._id === choix1){
+                        return(<img id="Choix1" key={item._id} src={item.image} alt="" />)
+                      }else{
+                        return(<img key={item._id} alt="" style={{display: "none"}}></img>)}
+                    })}
                 </Link>
               </div>
               <div></div>
@@ -68,7 +83,7 @@ const PageBoissons = () => {
             <ul id="api">
                 {boisson.map((item)=>{
                   return (<li key={item._id}>
-                            <input value={item.image} type="radio" name="choix" id={item._id}/>
+                            <input value={item._id} type="radio" name="choix" id={item._id}/>
                             <label htmlFor={item._id}>
                                 <div className="image">
                                     <img src={item.image} alt=""/>
