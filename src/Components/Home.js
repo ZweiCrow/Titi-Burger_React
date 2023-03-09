@@ -8,22 +8,6 @@ const Home = () => {
   return (
     <div className='home'>
     <main>
-        <div id="menuMobile">
-            <div>
-                <Link to="/click-collect">Click & Collect</Link>
-                <Link to="">Livraison</Link>
-            </div>
-            <nav>
-                <ul>
-                    <li><Link to="">La Carte</Link></li>
-                    <li><Link to="">Titi Story</Link></li>
-                    <li><Link to="">Le Resto</Link></li>
-                    <li><Link to="">Actus</Link></li>
-                    <li><Link to="">Réserver</Link></li>
-                    <li id="closeMenu"><img src="./image/Icons/closeMenu.svg" alt=""/></li>
-                </ul>
-            </nav>
-        </div>
         <section id="Presentation">
             <div id="Resto">
                 <h2>Le Resto</h2>

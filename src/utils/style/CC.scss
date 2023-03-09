@@ -21,3 +21,24 @@ main  { margin: 0; display: block;}
         }
       }
 }
+
+@media screen and (max-width: 800px) {
+  .CC{background: url(../../../public/image/header.png) no-repeat;background-size: 150% 100%;
+    main  { margin: 0; display: block; padding-bottom: 50px;}
+    #menu {width: 95%;height: fit-content;margin: 50px auto 0;padding: 50px 0; background: $blancT;border-radius: 15px; @include centerBlocH;
+            h1  {font-size: 50px;font-weight: bold;color: $violet;}
+            p   {font-size: 25px;color: $noir;width: 80%;margin: 70px 0;text-align: center;}
+            #total  { margin: 20px 0;}
+            a   {font-size: 25px;@include cta;}
+            div {width: 80%;height: 40%;background: url(../../../public/image/Icons/progressBar.svg)no-repeat;background-size: 80%;background-position: center;@include centerBloc;justify-content: space-around;
+              div {width: 200px;height: 200px;border-radius: 15px;background: $noir;@include mask;@include centerBloc;
+                    a {width: 100%;height: 100%;background: none;border: none;@include centerBloc;
+                        img {width: 125%;height: 100%;transition: .5s;
+                              &:hover {filter: brightness(1.5);}
+                            }
+                      }
+                  }
+            }
+          }
+    }
+}
