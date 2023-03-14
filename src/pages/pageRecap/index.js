@@ -57,7 +57,6 @@ const PageRecap = () => {
     fetchBoissons()
     fetchAccompagnements()
     fetchDessert()
-
   },[])
 
   if(isNaN(prix1)){

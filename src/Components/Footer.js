@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../utils/style/Footer.scss"
+import Map from './Map';
 
 const Footer = () => {
+  // useEffect(()=>{
+  //   const map = document.querySelector('[aria-label="Map"]')
+  //   map.style.zIndex = "9999999";
+  // })
+  
   return (
     <footer>
         <div>
@@ -21,7 +27,7 @@ const Footer = () => {
                 </li>
                 <li id="map">
                     <p>Où nous touver ?</p>
-                    <div id="Gmaps"></div>
+                    <div><Map/></div>
                 </li>
                 <li>
                     <p>Contacts</p>

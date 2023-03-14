@@ -3,4 +3,5 @@ export const URL = {
   fetchBoisson: "https://titi.startwin.fr/products/type/boisson",
   fetchAccompagnement: "https://titi.startwin.fr/products/type/accompagnement",
   fetchDessert: "https://titi.startwin.fr/products/type/dessert",
+  fetchOneProduct: "https://titi.startwin.fr/products/"
 }
